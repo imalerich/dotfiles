@@ -1,0 +1,6 @@
+URxvt.depth: 32
+URxvt.background: [100]#181818
+URxvt.foreground: [100]#ebeac5
+URxvt.scrollBar: false
+URxvt.font: xft:terminus:size=8:antialias=true:hinting=Full
+URxvt.urlLauncher : firefox

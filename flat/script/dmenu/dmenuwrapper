@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Figure out current screen size
+# SCREENWIDTH=$(xrandr -q | grep Screen | awk '{print $8}')
+# SCREENHEIGHT=$(xrandr -q | grep Screen | awk '{print $10}' | sed s/,//)
+SCREENWIDTH=1366
+SCREENHEIGHT=768
+
+# How close to the screen edges do we begin/end?
+EDGEWIDTH=50
+DMENUWIDTH=$(($SCREENWIDTH - $(($EDGEWIDTH + $EDGEWIDTH))))
+
+# dmenu X/Y coordinates
+XPOS=$EDGEWIDTH
+YPOS=$(($(($SCREENHEIGHT / 2)) - 15))
+
+FG="#181818"
+BG="#8a8764"
+FONT="-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*"
+
+dmenu_run -w $DMENUWIDTH -x $XPOS -y $YPOS -fn ${FONT} -nb $FG -nf $BG -sf $FG -sb $BG -p ">>" -dim 0.75
