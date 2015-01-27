@@ -1,0 +1,22 @@
+URxvt.depth: 32
+URxvt.background: [100]#181818
+URxvt.foreground: [100]#ebeac5
+URxvt.scrollBar: false
+URxvt.font: xft:terminus:size=8:antialias=true:hinting=Full
+URxvt.urlLauncher : firefox
+URxvt*color0: #c1bbd7
+URxvt*color1: #bca7b6
+URxvt*color2: #b393a0
+URxvt*color3: #a58289
+URxvt*color4: #997074
+URxvt*color5: #8c5e60
+URxvt*color6: #755250
+URxvt*color7: #d5c39f
+URxvt*color8: #d2a77d
+URxvt*color9: #e5b0ba
+URxvt*color10: #e79790
+URxvt*color11: #e16d6e
+URxvt*color12: #b0623e
+URxvt*color13: #963a13
+URxvt*color14: #cf8868
+URxvt*color15: #d59742

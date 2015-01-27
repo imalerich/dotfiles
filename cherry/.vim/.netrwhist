@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/imalerich/script/bar'
+let g:netrw_dirhist_2='/home/imalerich/.vim'
+let g:netrw_dirhist_3='/home/imalerich/.vim/bundle/vim-airline/autoload/airline/themes'
+let g:netrw_dirhist_4='/home/imalerich/.vim'
+let g:netrw_dirhist_5='/home/imalerich/.config/bspwm'
+let g:netrw_dirhist_6='/etc/X11/xinit'
