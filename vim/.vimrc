@@ -8,6 +8,7 @@ set autoindent
 set showtabline=0 
 set noshowmode
 set laststatus=2
+color jellybeans
 filetype plugin indent on
 let g:airline_left_sep=''
 let g:airline_right_sep=''
