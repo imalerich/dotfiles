@@ -1,2 +1,2 @@
 # dotfiles
-files that begin with dots... okay?
+Files that begin with dots.
