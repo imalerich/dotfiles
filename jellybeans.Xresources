@@ -1,0 +1,28 @@
+URxvt.depth: 32
+URxvt.scrollBar: false
+URxvt.urlLauncher : firefox
+
+URxvt*color0: #70b950
+URxvt*color1: #cf6a4c
+URxvt*color2: #799d6a
+URxvt*color3: #668799
+URxvt*color4: #99ad6a
+URxvt*color5: #556633
+URxvt*color6: #c6b6ee
+URxvt*color7: #8fbfdc
+URxvt*color8: #fad07a
+URxvt*color9: #8197bf
+URxvt*color10: #8fbfdc
+
+URxvt*color11: #a0a8b0
+URxvt*color12: #384048
+URxvt*color13: #535D66
+URxvt*color14: #1f1f1f
+URxvt*color15: #302028
+
+URxvt.background: [100]#0e0914
+URxvt.foreground: [100]#b0d0f0
+
+URxvt*transparent: false
+URxvt*shading: 5
+URxvt*blurRadius: 0
