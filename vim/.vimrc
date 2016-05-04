@@ -29,6 +29,15 @@ noremap j n
 noremap k t
 noremap l s
 
+noremap H J
+noremap T K
+noremap N H
+noremap S L
+
+noremap J N
+noremap K T
+noremap L S
+
 noremap [ 7
 noremap [ 7
 
