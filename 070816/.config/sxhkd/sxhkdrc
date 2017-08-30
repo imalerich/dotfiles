@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + space
-	rofi -show run
+	dinu
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -135,12 +135,7 @@ alt + {l,j}
 # Switch between QWERTY and Programmer Dvorak
 
 ctrl + space
-	setxkbmap -layout us -variant dvp -option caps:escape &
-	xmodmap $HOME/.xmodmap
-
-ctrl + shift + space
-	setxkbmap -layout us -option caps:escape &
-	xmodmap $HOME/.xmodmap_qwerty
+	/home/imalerich/.swapkbmap.sh
 
 # Doesn't work cause we're not using systemd anymore more.
 XF86Sleep

@@ -1,5 +1,6 @@
 URxvt.depth: 32
 URxvt.scrollBar: false
+URxvt.internalBorder: 12
 URxvt.urlLauncher : firefox
 
 URxvt*color0: #70b950
