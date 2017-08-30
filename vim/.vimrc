@@ -1,14 +1,14 @@
 execute pathogen#infect()
-syntax on 
-set tabstop=4
+syntax on
 set shiftwidth=4
 set smarttab
 set autoindent
-set showtabline=0 
+set showtabline=2
+set tabstop=4
 set noshowmode
 set laststatus=2
-colorscheme jellybeans
 set relativenumber
+set number
 filetype plugin indent on
 let g:airline_left_sep=''
 let g:airline_right_sep=''
@@ -16,9 +16,18 @@ let g:airline_theme='ubaryd'
 let g:airline_powerline_fonts=1
 let g:bufferline_echo=0
 
+filetype plugin on
+filetype on
+autocmd FileType tex setlocal spell spelllang=en_us
+let g:tex_flavor='latex'
+set grepprg=grep\ -nH\ $*
+
+let g:jellybeans_background_color_256='NONE'
+colorscheme jellybeans
+
 set mouse=a
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
+noremap <ScrollWheelUp> 4<C-Y>
+noremap <ScrollWheelDown> 4<C-E>
 
 noremap h j
 noremap t k
