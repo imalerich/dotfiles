@@ -19,8 +19,6 @@ xrdb .Xresources &
 synergys &
 $HOME/.screenlayout/hlayout.sh &
 
-xmodmap $HOME/.Xmodmap &
-xcape -e 'Control_L=Escape' &
-
 sxhkd &
+$HOME/.keyboard.sh &
 exec bspwm
