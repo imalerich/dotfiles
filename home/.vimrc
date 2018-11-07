@@ -10,9 +10,6 @@ set laststatus=2
 set relativenumber
 set number
 filetype plugin indent on
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_theme='ubaryd'
 let g:airline_powerline_fonts=1
 let g:bufferline_echo=0
 
@@ -23,7 +20,7 @@ let g:tex_flavor='latex'
 set grepprg=grep\ -nH\ $*
 
 let g:jellybeans_background_color_256='NONE'
-colorscheme jellybeans
+colorscheme dracula	
 
 set mouse=a
 noremap <ScrollWheelUp> 4<C-Y>
@@ -33,6 +30,11 @@ noremap h j
 noremap t k
 noremap n h
 noremap s l
+
+nnoremap <C-H> <C-W><C-J>
+nnoremap <C-T> <C-W><C-K>
+nnoremap <C-N> <C-W><C-H>
+nnoremap <C-S> <C-W><C-L>
 
 noremap j n
 noremap k t
