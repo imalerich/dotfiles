@@ -1,0 +1,386 @@
+; This config uses the new syntax (which isn't merged upstream)
+
+[settings]
+throttle-ms = 50
+throttle-limit = 3
+
+[bar/top]
+monitor = eDP1
+bottom = false
+width = 100%
+height = 32
+offset-y = 0
+
+background = #111
+foreground = #AAA
+linecolor = #ffffff
+
+spacing = 3
+lineheight = 0
+padding-top = 4
+padding-right = 4
+module-margin-left = 0
+module-margin-right = 4
+
+font-0 = NotoSans-Regular:size=8;0
+font-1 = Unifont:size=6;2
+font-2 = "Font Awesome 5 Free Solid:size=8;0"
+font-3 = "Noto Sans:size=8;2"
+font-4 = "Material Icons:size=10;2"
+font-5 = "Material Icons:size=10;2"
+
+modules-left = bspwm
+modules-right = cpu memory battery clock 
+
+[module/bspwm]
+type = internal/bspwm
+
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;10
+ws-icon-default = 1
+
+format = <label-state> <label-mode>
+;format-background = #00ffffff
+format-overline = #636a78
+format-padding = 2
+
+;label-dimmed-underline = ${BAR.background}
+
+label-focused = %icon%
+label-focused-foreground = #fff
+label-focused-background = #222
+label-focused-underline = #b72e4d
+label-focused-overline = #b72e4d
+label-focused-padding = 4
+label-focused-margin = 1
+
+label-occupied = %icon%
+label-occupied-padding = 4
+label-occupied-margin = 1
+
+label-urgent = %icon%
+label-urgent-padding = 4
+label-urgent-margin = 1
+
+label-empty = %icon%
+label-empty-padding = 4
+label-empty-margin = 1
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+
+format = <label> <ramp-coreload>
+format-background = #222
+format-foreground = #AAA
+format-underline = #da375b
+format-padding = 5
+
+label = CPU
+
+ramp-coreload-0 = ▁
+ramp-coreload-0-font = 2
+ramp-coreload-0-foreground = #AAA
+ramp-coreload-1 = ▂
+ramp-coreload-1-font = 2
+ramp-coreload-1-foreground = #AAA
+ramp-coreload-2 = ▃
+ramp-coreload-2-font = 2
+ramp-coreload-2-foreground = #AAA
+ramp-coreload-3 = ▄
+ramp-coreload-3-font = 2
+ramp-coreload-3-foreground = #AAA
+ramp-coreload-4 = ▅
+ramp-coreload-4-font = 2
+ramp-coreload-4-foreground = #AAA
+ramp-coreload-5 = ▆
+ramp-coreload-5-font = 2
+ramp-coreload-5-foreground = #AAA
+ramp-coreload-6 = ▇
+ramp-coreload-6-font = 2
+ramp-coreload-6-foreground = #AAA
+ramp-coreload-7 = █
+ramp-coreload-7-font = 2
+ramp-coreload-7-foreground = #AAA
+
+[module/memory]
+type = internal/memory
+
+format = <label> <bar-used>
+format-background = #222
+format-foreground = #ffffff
+format-underline = #da375b
+format-padding = 2
+
+label = RAM
+
+bar-used-width = 10
+bar-used-foreground-0 = #AAA
+bar-used-foreground-1 = #AAA
+bar-used-foreground-2 = #AAA
+bar-used-foreground-3 = #AAA
+bar-used-indicator = █
+bar-used-indicator-font = 5
+bar-used-indicator-foreground = #AAA
+bar-used-fill = █
+bar-used-fill-font = 5
+bar-used-empty = █
+bar-used-empty-font = 5
+bar-used-empty-foreground = #444
+
+[module/date]
+; type = internal/date
+; date = %Y-%m-%d %H:%M
+; date =    %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
+; date-detailed = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
+
+
+
+
+
+
+[bar/top]
+; monitor = eDP-1
+; width = 100%
+; height = 34
+; clickareas = 35
+;
+; background = #00000000
+; foreground = #ccffffff
+; linecolor = ${bar/bottom.background}
+;
+; spacing = 4
+; ;spacing = 2
+; lineheight = 16
+; padding-right = 5
+; module-margin-left = 3
+; module-margin-right = 3
+; ;module-margin-left = 1
+; ;module-margin-right = 1
+;
+; ;font-0 = envypn:pixelsize=13;0
+; font-0 = NotoSans-Regular:size=8;0
+; font-1 = MaterialIcons:size=10;0
+; font-2 = Termsynu:size=8;-1
+; font-3 = FontAwesome:size=10;0
+;
+; modules-left = powermenu mpd
+; modules-right = volume wireless-network wired-network battery date
+
+[bar/external_bottom]
+;inherit-from = bar/bottom
+
+; monitor = HDMI-1
+; bottom = true
+; width = ${bar/bottom.width}
+; height = ${bar/bottom.height}
+;
+; background = ${bar/bottom.background}
+; foreground = ${bar/bottom.foreground}
+; linecolor = ${bar/bottom.linecolor}
+;
+; spacing = ${bar/bottom.spacing}
+; lineheight = ${bar/bottom.lineheight}
+; padding-right = ${bar/bottom.padding_right}
+; module-margin-left = ${bar/bottom.module_margin_left}
+; module-margin-right = ${bar/bottom.module_margin_right}
+;
+; font-0 = ${bar/bottom.font-0}
+; font-1 = ${bar/bottom.font-1}
+; font-2 = ${bar/bottom.font-2}
+; font-3 = ${bar/bottom.font-3}
+; font-4 = ${bar/bottom.font-4}
+;
+; modules-left = bspwm
+; modules-right = clock
+
+[module/backlight]
+; type = internal/backlight
+; card = intel_backlight
+; format = <ramp> <bar>
+;
+; ramp-0 = 
+; ramp-1 = 
+; ramp-2 = 
+;
+; bar-width = 10
+; bar-format = %{A4:backlight_percentage%__p5:}%{A5:backlight_percentage%__m5:}%{+u}%{+o}%fill%%{-u}%{-o}%indicator%%{+u}%{+o}%empty%%{-u}%{-o}%{A}%{A}
+; bar-indicator = |
+; bar-indicator-foreground = #ff
+; bar-indicator-font = 3
+; bar-fill = █
+; bar-fill-foreground = #bb
+; bar-fill-font = 3
+; bar-empty = █
+; bar-empty-font = 3
+; bar-empty-foreground = #44
+
+[module/battery]
+type = internal/battery
+full-at = 98
+
+format-background = #AAA
+format-foreground = #AAA
+format-underline = #da375b
+format-charging = <label-charging>   
+format-discharging = <label-discharging>   
+format-full = <label-full>   
+
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = #f53c3c
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = #ffa900
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+bar-capacity-width = 10
+bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
+bar-capacity-fill = █
+bar-capacity-fill-foreground = #ddffffff
+bar-capacity-fill-font = 3
+bar-capacity-empty = █
+bar-capacity-empty-font = 3
+bar-capacity-empty-foreground = #44ffffff
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate-ms = 750
+
+[module/bspwm-tmp]
+; type = internal/bspwm
+; format = <label-state>
+;
+; label-focused = 
+; label-focused-padding = 1
+; label-occupied = 
+; label-occupied-padding = 1
+; label-empty = 
+; label-empty-padding = 1
+
+[module/mpd]
+; type = internal/mpd
+; clickable-progress = true
+; format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+;
+; icon-play = 
+; icon-pause = 
+; icon-stop = 
+; icon-prev = 
+; icon-next = 
+; icon-random = 
+; icon-repeat = 
+;
+; toggle-on-foreground =
+; toggle-off-foreground = #55
+;
+; bar-progress-width = 45
+; bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
+; bar-progress-indicator = |
+; bar-progress-indicator-foreground = #ff
+; bar-progress-indicator-font = 3
+; bar-progress-fill = ─
+; bar-progress-fill-foreground = #bb
+; bar-progress-fill-font = 3
+; bar-progress-empty = ─
+; bar-progress-empty-font = 3
+; bar-progress-empty-foreground = #44
+
+[module/wireless-network]
+; type = internal/network
+; interface = net1
+; interval = 3.0
+; ping-interval = 10
+;
+; format-connected = <ramp-signal> <label-connected>
+; label-connected = %essid%
+; label-disconnected =    not connected
+; label-disconnected-foreground = #66
+;
+; ramp-signal-0 = 
+; ramp-signal-1 = 
+; ramp-signal-2 = 
+; ramp-signal-3 = 
+; ramp-signal-4 = 
+;
+; animation-packetloss-0 = 
+; animation-packetloss-0-foreground = #ffa64c
+; animation-packetloss-1 = 
+; animation-packetloss-1-foreground = ${bar/top.foreground}
+; animation-packetloss-framerate-ms = 500
+
+[module/wired-network]
+; type = internal/network
+; interface = net0
+; interval = 3.0
+;
+; label-connected =    %{T3}%local_ip%%{T-}
+; label-disconnected-foreground = #66
+
+[module/volume]
+; type = internal/volume
+; speaker-mixer = Speaker
+; headphone-mixer = Headphone
+; headphone-id = 9
+;
+; format-volume = <ramp-volume> <label-volume>
+; label-muted =   muted
+; label-muted-foreground = #66
+;
+; ramp-volume-0 = 
+; ramp-volume-1 = 
+; ramp-volume-2 = 
+; ramp-volume-3 = 
+
+[module/powermenu]
+; type = custom/menu
+;
+; format-padding = 5
+;
+; label-open = 
+; label-close = 
+;
+; menu-0-0 = Terminate WM
+; menu-0-0-foreground = #fba922
+; menu-0-0-exec = bspc quit -1
+; menu-0-1 = Reboot
+; menu-0-1-foreground = #fba922
+; menu-0-1-exec = menu_open-1
+; menu-0-2 = Power off
+; menu-0-2-foreground = #fba922
+; menu-0-2-exec = menu_open-2
+;
+; menu-1-0 = Cancel
+; menu-1-0-foreground = #fba922
+; menu-1-0-exec = menu_open-0
+; menu-1-1 = Reboot
+; menu-1-1-foreground = #fba922
+; menu-1-1-exec = sudo reboot
+;
+; menu-2-0 = Power off
+; menu-2-0-foreground = #fba922
+; menu-2-0-exec = sudo poweroff
+; menu-2-1 = Cancel
+; menu-2-1-foreground = #fba922
+; menu-2-1-exec = menu_open-0
+
+[module/clock]
+type = internal/date
+interval = 5
+date = %%{F#fff}%H:%M%%{F-}
+format-foreground = #ffffff
+format-underline = #da375b
+format-padding = 2
+
+; vim:ft=dosini
