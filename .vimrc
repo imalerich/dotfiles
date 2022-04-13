@@ -20,7 +20,9 @@ let g:tex_flavor='latex'
 set grepprg=grep\ -nH\ $*
 
 let g:jellybeans_background_color_256='NONE'
-colorscheme dracula	
+colorscheme jellybeans	
+
+nnoremap <C-e> :NERDTree<CR>
 
 set mouse=a
 noremap <ScrollWheelUp> 4<C-Y>
