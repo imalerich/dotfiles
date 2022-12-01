@@ -1,4 +1,3 @@
-execute pathogen#infect()
 syntax on
 set shiftwidth=4
 set smarttab
@@ -7,9 +6,21 @@ set showtabline=2
 set tabstop=4
 set noshowmode
 set laststatus=2
+set ignorecase
+set smartcase
 set relativenumber
 set number
 filetype plugin indent on
+
+call plug#begin()
+	Plug 'imalerich/asmM6502'
+	Plug 'nanotech/jellybeans.vim'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#whitespace#enabled=0
 let g:airline_powerline_fonts=1
 let g:bufferline_echo=0
 
