@@ -14,10 +14,14 @@ filetype plugin indent on
 
 call plug#begin()
 	Plug 'imalerich/asmM6502'
+	Plug 'imalerich/vim-code-dark'
 	Plug 'nanotech/jellybeans.vim'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
+	Plug 'fidian/hexmode'
 call plug#end()
+
+let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o'
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#enabled=0
