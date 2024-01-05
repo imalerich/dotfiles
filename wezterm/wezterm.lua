@@ -22,4 +22,7 @@ config.colors = {
   background = '#13141E',
 }
 
+-- disable the terminal bell
+config.audible_bell = "Disabled"
+
 return config
