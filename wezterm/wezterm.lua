@@ -25,4 +25,17 @@ config.colors = {
 -- disable the terminal bell
 config.audible_bell = "Disabled"
 
+config.keys = {
+  {
+    key = '/',
+    mods = 'CTRL',
+    action = wezterm.action.ActivateTabRelative(-1)
+  },
+  {
+    key = '@',
+    mods = 'CTRL',
+    action = wezterm.action.ActivateTabRelative(1)
+  }
+}
+
 return config
